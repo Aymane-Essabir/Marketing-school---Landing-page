@@ -1,0 +1,81 @@
+.btn-primary {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 980px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.4);
+}
+
+.btn-ghost {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 980px;
+  background: transparent;
+  color: var(--primary);
+  font-size: 19px;
+  font-weight: 500;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 113, 227, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 980px;
+  background: #1d1d1f;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-dark:hover {
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--primary);
+  font-size: 19px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+  gap: 12px;
+  text-decoration: underline;
+}
+
+.btn-link::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+

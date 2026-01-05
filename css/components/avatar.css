@@ -1,0 +1,28 @@
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px var(--border-light), var(--shadow-sm);
+}
+
+.avatar-lg {
+  width: 80px;
+  height: 80px;
+}
+
+.avatar-stack {
+  display: flex;
+  margin-left: 12px;
+}
+
+.avatar-stack .avatar {
+  margin-left: -12px;
+  transition: transform 0.3s ease;
+}
+
+.avatar-stack .avatar:hover {
+  transform: translateY(-4px) scale(1.1);
+  z-index: 2;
+}

@@ -1,0 +1,131 @@
+.banner {
+  position: relative;
+  padding: 160px 0 120px;
+  background: var(--bg-body);
+  color: var(--text-main);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Subtle background glow effect */
+.banner::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.banner-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-main);
+  border-radius: 980px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+}
+
+.banner h1 {
+  font-size: 96px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.banner .lead {
+  font-size: 28px;
+  line-height: 1.25;
+  margin: 0 auto 56px;
+  color: var(--text-muted);
+  max-width: 750px;
+  letter-spacing: -0.01em;
+}
+
+.banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.banner-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 40px;
+  padding-top: 60px;
+  border-top: 1px solid var(--border-light);
+}
+
+.proof-item {
+  text-align: center;
+}
+
+.proof-number {
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.banner-card {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  transform: rotateX(10deg);
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.banner-card:hover {
+  transform: rotateX(0deg) translateY(-10px);
+}
+
+@media (max-width: 900px) {
+  .banner {
+    padding: 120px 0 80px;
+  }
+
+  .banner h1 {
+    font-size: 56px;
+  }
+
+  .banner .lead {
+    font-size: 22px;
+  }
+
+  .banner-proof {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .proof-number {
+    font-size: 48px;
+  }
+}
